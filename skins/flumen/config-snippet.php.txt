@@ -1,10 +1,30 @@
-; Fragmento sugerido para Nora (config.inc.php / config.local.php)
-; No es config de produccion por si solo: copiar valores al install remoto.
+; Branding Flumen SOBRE skin elastic (MSG 019). Layout stock Roundcube.
+; Copiar al config del Roundcube CUSTOM de correo.flumen.com.ar (.131).
+; NO usar en Roundcube Hestia de webmail. NO activar skin=flumen full.
 
-$config['skin'] = 'flumen';
+$config['skin'] = 'elastic';
 $config['product_name'] = 'Flumen Webmail';
 $config['display_product_info'] = 0;
 $config['support_url'] = '';
+
+; Logos/favicon Flumen (paths relativos al root del install Roundcube).
+; Requiere carpeta skins/flumen/images/ en el server (solo assets; skin flumen NO activa).
+$config['skin_logo'] = [
+  'elastic:login'           => 'skins/flumen/images/logo.svg',
+  'elastic:*'               => 'skins/flumen/images/logo.svg',
+  'elastic:*[small]'        => 'skins/flumen/images/logo-small.svg',
+  'elastic:*[dark]'         => 'skins/flumen/images/logo-dark.svg',
+  'elastic:*[small-dark]'   => 'skins/flumen/images/logo-small-dark.svg',
+  'elastic:*[print]'        => 'skins/flumen/images/logo.svg',
+  'elastic:*[favicon]'      => 'skins/flumen/images/favicon.ico',
+  '[favicon]'               => 'skins/flumen/images/favicon.ico',
+];
+$config['favicon'] = 'skins/flumen/images/favicon.ico';
+
 $config['imap_host'] = 'ssl://mail.postale.io:993';
 $config['smtp_host'] = 'ssl://mail.postale.io:465';
 ; Si 465 falla: $config['smtp_host'] = 'tls://mail.postale.io:587';
+
+; Destino: 173.208.196.131. NO Prod1 (.132).
+; URL staging: https://correo.flumen.com.ar/
+; Cutover a webmail.* solo con GO Admin aparte.

@@ -1,0 +1,17 @@
+# FTP Gregory - branding MSG 019 (urgente)
+
+Destino: Roundcube CUSTOM correo.flumen.com.ar (.131)
+NO tocar Hestia webmail.*; cutover hold.
+
+## 1) Assets
+Local: Agentes/projects/flumenroundcube/skins/flumen/images/
+Remote: {roundcube}/skins/flumen/images/
+(subir todos los archivos de images/)
+
+## 2) Config
+Mergear Agentes/projects/flumenroundcube/skins/flumen/config-snippet.php.txt
+Clave: skin=elastic + skin_logo + favicon + product_name=Flumen Webmail
+NO poner skin=flumen.
+
+## 3) Smoke
+Login logo Flumen, inbox logo, favicon pestana, titulo Flumen Webmail.

@@ -68,6 +68,11 @@ label[for="rcmloginhost"],
   display: none !important;
 }
 
+/* Prefer email-style username field presentation */
+#rcmloginuser {
+  font-size: 1rem;
+}
+
 #login-footer {
   color: #5b6b7a;
   font-size: 0.85rem;

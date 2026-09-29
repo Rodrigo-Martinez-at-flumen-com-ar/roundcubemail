@@ -3,6 +3,7 @@
   "author": "Flumen / Clara",
   "license": "Proprietary",
   "extends": "elastic",
+  "localization": true,
   "config": {
     "supported_layouts": ["widescreen"],
     "dark_mode_support": true,

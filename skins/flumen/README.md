@@ -1,28 +1,34 @@
-# Skin Flumen (Roundcube) - Clara frontend
+# Branding Flumen sobre Elastic (MSG 019)
 
-Pack listo para deploy en el Roundcube de webmail.flumen.com.ar.
-Extiende Elastic. Login: casilla + password. Sin textos de anotador (ley 22).
+correo.flumen.com.ar mantiene skin **elastic** (layout stock).
+Branding = logos + favicon + product_name Flumen. NO activar skin flumen full.
 
-## Path en repo
-Agentes/projects/flumenroundcube/skins/flumen/
+## Assets (FTP)
+Subir carpeta completa:
+`projects/flumenroundcube/skins/flumen/images/`
+hacia:
+`{roundcube_custom}/skins/flumen/images/`
 
-## Deploy (Nora / Gregory)
-1. Copiar carpeta `flumen` a `{roundcube}/skins/flumen/`
-2. En config.inc.php (o local):
-   - $config['skin'] = 'flumen';
-   - $config['product_name'] = 'Flumen Webmail';
-   - $config['display_product_info'] = 0;
-   - $config['imap_host'] = 'ssl://mail.postale.io:993';
-   - $config['smtp_host'] = 'ssl://mail.postale.io:465';
-3. Con imap_host string fijo, Roundcube no muestra campo Servidor.
-   La skin tambien oculta #rcmloginhost por CSS/JS por si queda visible.
-4. No tocar apex flumen.com.ar ni MX Postale.
+Archivos:
+- logo.svg, logo-dark.svg
+- logo-small.svg, logo-small-dark.svg, logo-small.png, logo.png
+- favicon.ico, favicon.png, favicon.svg
 
-## Contenido
-- meta.json (extends elastic + stylesheet flumen.css)
-- styles/flumen.css (colores marca)
-- templates/login.html (logo Flumen, footer publico limpio)
-- images/ logo.svg + png + favicon
+No hace falta templates ni meta de skin flumen. Solo images (+ snippet en config).
 
-## Colores
-- Deep #071A2B / River #0F7B9E / Current #22C3E6 / Sand #F2A541
+## Config
+Aplicar `config-snippet.php.txt` al config del install custom:
+- skin=elastic
+- product_name=Flumen Webmail
+- skin_logo + favicon apuntando a skins/flumen/images/*
+
+## Checklist Admin/Gregory
+1. Login: logo Flumen, layout elastic centrado
+2. Inbox/header: logo small / dark segun modo
+3. Favicon Flumen en pestana
+4. Titulos / about: Flumen Webmail (sin Roundcube generico donde config alcanza)
+5. IMAP/SMTP Postale intactos; NO Hestia webmail; cutover hold
+
+## Paths repo
+- Primary: projects/flumenroundcube/skins/flumen/
+- Mirror: projects/flumenroundcube/roundcubemail/skins/flumen/
