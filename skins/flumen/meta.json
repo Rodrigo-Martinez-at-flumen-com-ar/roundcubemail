@@ -1,0 +1,15 @@
+{
+  "name": "Flumen",
+  "author": "Flumen / Clara",
+  "license": "Proprietary",
+  "extends": "elastic",
+  "config": {
+    "supported_layouts": ["widescreen"],
+    "dark_mode_support": true,
+    "additional_logo_types": ["dark", "small", "small-dark"]
+  },
+  "meta": {
+    "viewport": "width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0",
+    "theme-color": "#071A2B"
+  }
+}

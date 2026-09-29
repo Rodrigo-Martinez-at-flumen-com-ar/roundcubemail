@@ -1,0 +1,103 @@
+/* Flumen skin overrides (extends Elastic). Public UI only. */
+
+:root {
+  --flumen-deep: #071a2b;
+  --flumen-river: #0f7b9e;
+  --flumen-current: #22c3e6;
+  --flumen-sand: #f2a541;
+  --flumen-foam: #eaf6fa;
+  --flumen-ink: #0d1b2a;
+}
+
+/* Brand accents over Elastic */
+body {
+  --main: var(--flumen-river);
+}
+
+a,
+a:visited {
+  color: var(--flumen-river);
+}
+
+a:hover {
+  color: var(--flumen-current);
+}
+
+/* Login: casilla + password only */
+body.task-login {
+  background:
+    radial-gradient(80% 60% at 70% 20%, rgba(34, 195, 230, 0.14), transparent 60%),
+    radial-gradient(60% 50% at 10% 90%, rgba(15, 123, 158, 0.16), transparent 60%),
+    #fff;
+}
+
+body.task-login.dark-mode,
+html.dark-mode body.task-login {
+  background:
+    radial-gradient(80% 60% at 70% 20%, rgba(34, 195, 230, 0.14), transparent 60%),
+    radial-gradient(60% 50% at 10% 90%, rgba(15, 123, 158, 0.16), transparent 60%),
+    var(--flumen-deep);
+}
+
+body.task-login #logo {
+  max-height: 72px;
+  top: 12vh;
+}
+
+#login-form {
+  max-width: 340px;
+}
+
+#rcmloginsubmit {
+  background-color: var(--flumen-sand) !important;
+  border-color: var(--flumen-sand) !important;
+  color: #1a1205 !important;
+  font-weight: 600;
+}
+
+#rcmloginsubmit:hover {
+  filter: brightness(0.96);
+}
+
+/* Hide server/host if misconfigured as visible field */
+#rcmloginhost,
+label[for="rcmloginhost"],
+#login-form tr:has(#rcmloginhost),
+#login-form .row:has(#rcmloginhost),
+#login-form .form-group:has(#rcmloginhost) {
+  display: none !important;
+}
+
+#login-footer {
+  color: #5b6b7a;
+  font-size: 0.85rem;
+}
+
+html.dark-mode #login-footer {
+  color: #9db1bf;
+}
+
+/* Chrome / task menu closer to Flumen */
+#layout-menu {
+  background: var(--flumen-deep) !important;
+}
+
+.button.selected,
+.listing li.selected,
+.listing tr.selected td {
+  background-color: rgba(15, 123, 158, 0.12);
+}
+
+.btn-primary,
+button.primary,
+input.button.mainaction {
+  background-color: var(--flumen-river);
+  border-color: var(--flumen-river);
+}
+
+.btn-primary:hover,
+button.primary:hover,
+input.button.mainaction:hover {
+  background-color: var(--flumen-current);
+  border-color: var(--flumen-current);
+}

@@ -1,0 +1,10 @@
+; Fragmento sugerido para Nora (config.inc.php / config.local.php)
+; No es config de produccion por si solo: copiar valores al install remoto.
+
+$config['skin'] = 'flumen';
+$config['product_name'] = 'Flumen Webmail';
+$config['display_product_info'] = 0;
+$config['support_url'] = '';
+$config['imap_host'] = 'ssl://mail.postale.io:993';
+$config['smtp_host'] = 'ssl://mail.postale.io:465';
+; Si 465 falla: $config['smtp_host'] = 'tls://mail.postale.io:587';
